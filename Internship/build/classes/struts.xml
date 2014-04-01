@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts 
+PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" 
+"http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+<package name="internship" extends="struts-default">
+
+<!--Login-->
+<action name="Login" method="Login" class="com.infobay.action.LoginAction">
+<result name="INERN">pages/intern/dashboard.jsp</result>
+<result name="error">loginpage.jsp</result>
+</action>
+
+		 <!--Intern Action-->
+
+<!--Degree DropDown-->
+<action name="degreeAction" method="internDropdownList" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Branch DropDown-->
+<action name="branchAction" method="getBranch" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Second Degree DropDown-->
+<action name="secondDegreeAction" method="internDropdownList" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Second Branch DropDown-->
+<action name="secondBranchAction" method="getSecondBranch" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Intern Country DropDown-->
+<action name="countryDropDown" method="getCountries" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Intern State DropDown-->
+<action name="stateDropDown" method="getStates" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Intern City DropDown-->
+<action name="cityDropDown" method="getCities" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+<!--Intern Registration-->
+
+<action name="loadInternRegistration" method="loadInternRegistration" class="com.infobay.action.InternAction">
+<result name="success">intern_Registration.jsp</result>
+</action>
+
+<action name="internRegistration" method="internRegistration" class="com.infobay.action.InternAction">
+<result name="success"></result>
+<result name="error"></result>
+</action>
+
+</package>
+</struts>
